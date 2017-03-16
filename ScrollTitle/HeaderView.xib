@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HeaderView" customModule="ScrollTitle" customModuleProvider="target">
+            <connections>
+                <outlet property="descLabel" destination="XiU-of-0J8" id="bEx-fE-MYB"/>
+                <outlet property="titleLabel" destination="h9N-iV-3QD" id="1cv-tH-vvo"/>
+                <outlet property="view" destination="m3b-Mf-Hm3" id="Kjg-VL-7Ze"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="m3b-Mf-Hm3">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="81"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h9N-iV-3QD">
+                    <rect key="frame" x="16" y="16" width="56" height="27"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="It's a long multiline subtitle with a meaningless description and so on . . ." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XiU-of-0J8">
+                    <rect key="frame" x="12" y="51" width="351" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cw2-XH-gHs" userLabel="Separator View">
+                    <rect key="frame" x="0.0" y="80" width="375" height="1"/>
+                    <color key="backgroundColor" red="0.90980392160000001" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="i4N-zq-Ujg"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Cw2-XH-gHs" secondAttribute="bottom" id="Cl7-Zb-vrk"/>
+                <constraint firstAttribute="trailing" secondItem="XiU-of-0J8" secondAttribute="trailing" constant="12" id="DCo-5g-Jfy"/>
+                <constraint firstAttribute="trailing" secondItem="Cw2-XH-gHs" secondAttribute="trailing" id="Gol-LJ-FS0"/>
+                <constraint firstItem="Cw2-XH-gHs" firstAttribute="leading" secondItem="m3b-Mf-Hm3" secondAttribute="leading" id="KiE-iE-cjY"/>
+                <constraint firstItem="XiU-of-0J8" firstAttribute="top" secondItem="h9N-iV-3QD" secondAttribute="bottom" constant="8" id="bTQ-Tk-f6x"/>
+                <constraint firstItem="h9N-iV-3QD" firstAttribute="leading" secondItem="m3b-Mf-Hm3" secondAttribute="leading" constant="16" id="ony-Ob-6Dz"/>
+                <constraint firstItem="XiU-of-0J8" firstAttribute="leading" secondItem="m3b-Mf-Hm3" secondAttribute="leading" constant="12" id="tSO-06-g3N"/>
+                <constraint firstItem="h9N-iV-3QD" firstAttribute="top" secondItem="m3b-Mf-Hm3" secondAttribute="top" constant="16" id="wvB-eT-tCu"/>
+                <constraint firstAttribute="bottom" secondItem="XiU-of-0J8" secondAttribute="bottom" id="xSP-yY-INK"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="32.5" y="-533.5"/>
+        </view>
+    </objects>
+</document>
