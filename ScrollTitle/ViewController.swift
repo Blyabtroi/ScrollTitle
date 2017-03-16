@@ -35,14 +35,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         super.viewDidLoad()
         
         let title = "It's a title"
-        let desc = "It's a long multiline subtitle with a meaningless description and so on . . ."
+        let desc = "A long, long time ago in a galaxy far away Naboo was under an attack and I thought me and Qui-Gon Jinn could talk the federation into maybe cutting them a little slack . . ."
         self.headerTitleLabel.text = title
         
         self.tableHeader = HeaderView()
         self.tableHeader?.setTitle(title: title, desc: desc)
         self.tableView.tableHeaderView = self.tableHeader
-        
-        
         
         self.tableView.delegate = nil
         self.tableView.contentInset = UIEdgeInsetsMake(self.headerImageView.frame.size.height, 0, 0, 0)
@@ -80,8 +78,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let offset = scrollView.contentOffset.y + self.headerImageView.bounds.size.height
-        
-        NSLog("offset: \(offset) \(scrollView.contentOffset.y)")
         
         var headerTransform = CATransform3DIdentity
         

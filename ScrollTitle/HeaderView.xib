@@ -28,7 +28,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="It's a long multiline subtitle with a meaningless description and so on . . ." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XiU-of-0J8">
-                    <rect key="frame" x="12" y="51" width="351" height="30"/>
+                    <rect key="frame" x="12" y="31.5" width="351" height="49.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
@@ -46,7 +46,7 @@
                 <constraint firstAttribute="trailing" secondItem="XiU-of-0J8" secondAttribute="trailing" constant="12" id="DCo-5g-Jfy"/>
                 <constraint firstAttribute="trailing" secondItem="Cw2-XH-gHs" secondAttribute="trailing" id="Gol-LJ-FS0"/>
                 <constraint firstItem="Cw2-XH-gHs" firstAttribute="leading" secondItem="m3b-Mf-Hm3" secondAttribute="leading" id="KiE-iE-cjY"/>
-                <constraint firstItem="XiU-of-0J8" firstAttribute="top" secondItem="h9N-iV-3QD" secondAttribute="bottom" constant="8" id="bTQ-Tk-f6x"/>
+                <constraint firstItem="XiU-of-0J8" firstAttribute="top" secondItem="h9N-iV-3QD" secondAttribute="bottom" priority="750" constant="8" identifier="$LabelToTextView$" id="bTQ-Tk-f6x"/>
                 <constraint firstItem="h9N-iV-3QD" firstAttribute="leading" secondItem="m3b-Mf-Hm3" secondAttribute="leading" constant="16" id="ony-Ob-6Dz"/>
                 <constraint firstItem="XiU-of-0J8" firstAttribute="leading" secondItem="m3b-Mf-Hm3" secondAttribute="leading" constant="12" id="tSO-06-g3N"/>
                 <constraint firstItem="h9N-iV-3QD" firstAttribute="top" secondItem="m3b-Mf-Hm3" secondAttribute="top" constant="16" id="wvB-eT-tCu"/>
