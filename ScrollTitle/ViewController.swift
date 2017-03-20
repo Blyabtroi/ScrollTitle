@@ -16,7 +16,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var headerTitleLabel: UILabel!
     @IBOutlet weak var backButton: UIButton!
     
-    var tableHeader: HeaderView?
+    var tableHeader: HeaderView!
     
     var offsetLabelHeader: CGFloat
     var distanceLabelHeader: CGFloat
@@ -39,7 +39,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.headerTitleLabel.text = title
         
         self.tableHeader = HeaderView()
-        self.tableHeader?.setTitle(title: title, desc: desc)
+        self.tableHeader.setTitle(title: title, desc: desc)
         self.tableView.tableHeaderView = self.tableHeader
         
         self.tableView.delegate = nil
@@ -94,7 +94,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             let labelTransform = CATransform3DMakeTranslation(0, fmax(-self.distanceLabelHeader, self.offsetLabelHeader - offset), 0)
             self.headerTitleLabel.layer.transform = labelTransform
             
-            let fullyVisibleoffset = self.headerImageView.bounds.size.height - self.fakeNavBar.frame.size.height + (self.tableHeader?.titleLabel.frame.origin.y)!
+            let fullyVisibleoffset = self.headerImageView.bounds.size.height - self.fakeNavBar.frame.size.height + self.tableHeader.titleLabel.frame.origin.y
             let fullyTransparentOffset = self.headerImageView.bounds.size.height - self.fakeNavBar.frame.size.height
             let alpha = fmin(1.0, (offset/fullyVisibleoffset - fullyTransparentOffset/fullyVisibleoffset) * 10.0)
             self.fakeNavBar.backgroundColor = UIColor.init(red: 0.008, green: 0.118, blue: 0.282, alpha: alpha)
@@ -140,7 +140,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 scrollView.contentOffset  = CGPoint.init(x: 0, y: -scrollView.contentInset.top)
             }
             else if (point.y < 0 && offset < distance) {
-                let y = -(self.tableHeader?.titleLabel.frame.origin.y)!
+                let y = -self.tableHeader.titleLabel.frame.origin.y
                 scrollView.contentOffset = CGPoint.init(x:0, y:y)
             }
 
